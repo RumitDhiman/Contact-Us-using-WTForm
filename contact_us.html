@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+
+<html>
+    <head>
+        <tittle>Contact</tittle>
+    </head>
+    <body>
+        <h1>Creating Contact us using WTForm in Flask</h1>
+        <form method='POST' action='{{url_for('home')}}'>
+            {{form.csrf_token}}
+        <p>
+            {{form.name.label}}
+            <br>
+            {{form.name}}
+        </p>
+        <p>
+            {{form.email.label}}
+            <br>
+            {{form.email}}
+        </p>
+        <p>
+            {{form.message.label}}
+            <br>
+            {{form.message}}
+        </p>
+        {{form.submit}}
+        </form>
+    </body>
+</html>
